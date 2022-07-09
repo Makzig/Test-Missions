@@ -1,0 +1,150 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Gui.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/answers_button.tscn" type="PackedScene" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.866667, 0.521569, 0.878431, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.662745, 0.329412, 0.784314, 1 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=2]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="Gui" parent="." instance=ExtResource( 1 )]
+
+[node name="QestionLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -19.0
+margin_top = -100.0
+margin_right = 77.0
+margin_bottom = -63.0
+text = "The Question
+"
+
+[node name="answers_button" parent="." instance=ExtResource( 3 )]
+
+[node name="answers_button5" parent="." instance=ExtResource( 3 )]
+margin_top = 475.0
+margin_right = 352.0
+margin_bottom = 498.0
+
+[node name="answers_button6" parent="." instance=ExtResource( 3 )]
+margin_left = 702.0
+margin_top = 458.0
+margin_right = 810.0
+margin_bottom = 481.0
+
+[node name="answers_button7" parent="." instance=ExtResource( 3 )]
+margin_left = 702.0
+margin_right = 810.0
+
+[node name="Lose_popup" type="Popup" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="Lose_popup"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0313726, 0.0313726, 0.0313726, 0.768627 )
+
+[node name="Label" type="Label" parent="Lose_popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.0
+margin_top = -100.0
+margin_right = 20.0
+margin_bottom = -100.0
+text = "You Lose!"
+
+[node name="Panel" type="Panel" parent="Lose_popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -75.0
+margin_right = 75.0
+margin_bottom = 75.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Lose_popup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -58.0
+margin_top = -20.0
+margin_right = 58.0
+margin_bottom = 20.0
+
+[node name="Restart" type="Button" parent="Lose_popup/HBoxContainer"]
+margin_right = 68.0
+margin_bottom = 40.0
+text = "Restart"
+
+[node name="Exit" type="Button" parent="Lose_popup/HBoxContainer"]
+margin_left = 72.0
+margin_right = 116.0
+margin_bottom = 40.0
+text = "Exit"
+
+[node name="WinPopup" type="Popup" parent="."]
+pause_mode = 2
+visible = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect2" type="ColorRect" parent="WinPopup"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0313726, 0.0313726, 0.0313726, 0.768627 )
+
+[node name="ColorRect" type="Panel" parent="WinPopup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = -75.0
+margin_right = 75.0
+margin_bottom = 75.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="Label" type="Label" parent="WinPopup"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -30.0
+margin_right = -20.0
+margin_bottom = -30.0
+
+[connection signal="Lose" from="Gui" to="." method="_on_Gui_Lose"]
+[connection signal="Answer_pressed" from="answers_button" to="." method="_on_answers_button_Answer_pressed"]
+[connection signal="Answer_pressed" from="answers_button5" to="." method="_on_answers_button_Answer_pressed"]
+[connection signal="Answer_pressed" from="answers_button6" to="." method="_on_answers_button_Answer_pressed"]
+[connection signal="Answer_pressed" from="answers_button7" to="." method="_on_answers_button_Answer_pressed"]
+[connection signal="pressed" from="Lose_popup/HBoxContainer/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Lose_popup/HBoxContainer/Exit" to="." method="_on_Exit_pressed"]

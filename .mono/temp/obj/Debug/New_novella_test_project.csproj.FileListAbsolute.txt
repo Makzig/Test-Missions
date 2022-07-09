@@ -1,0 +1,9 @@
+C:\Users\Makzig Sladkiy\Documents\New_novella_test_project\.mono\temp\bin\Debug\New_novella_test_project.dll
+C:\Users\Makzig Sladkiy\Documents\New_novella_test_project\.mono\temp\bin\Debug\New_novella_test_project.pdb
+C:\Users\Makzig Sladkiy\Documents\New_novella_test_project\.mono\temp\obj\Debug\New_novella_test_project.csproj.AssemblyReference.cache
+C:\Users\Makzig Sladkiy\Documents\New_novella_test_project\.mono\temp\obj\Debug\New_novella_test_project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Makzig Sladkiy\Documents\New_novella_test_project\.mono\temp\obj\Debug\New_novella_test_project.AssemblyInfoInputs.cache
+C:\Users\Makzig Sladkiy\Documents\New_novella_test_project\.mono\temp\obj\Debug\New_novella_test_project.AssemblyInfo.cs
+C:\Users\Makzig Sladkiy\Documents\New_novella_test_project\.mono\temp\obj\Debug\New_novella_test_project.csproj.CoreCompileInputs.cache
+C:\Users\Makzig Sladkiy\Documents\New_novella_test_project\.mono\temp\obj\Debug\New_novella_test_project.dll
+C:\Users\Makzig Sladkiy\Documents\New_novella_test_project\.mono\temp\obj\Debug\New_novella_test_project.pdb
